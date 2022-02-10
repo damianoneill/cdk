@@ -25,3 +25,12 @@ dist
 
 # location of GOPATH, used to cache modules, bins, etc.
 .go
+
+
+
+# cdktf and terraform ignores
+.terraform
+cdktf.out
+cdktf.log
+*terraform.*.tfstate*
+generated

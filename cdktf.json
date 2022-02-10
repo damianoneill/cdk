@@ -1,0 +1,15 @@
+{
+    "language": "go",
+    "app": "$(go env GOPATH)/bin/cdk synth",
+    "codeMakerOutput": "generated",
+    "projectId": "d55f4a8d-919f-4c6d-84d4-a22851b47d2c",
+    "terraformProviders": [
+        "aws@~> 3.45",
+        "kreuzwerker/docker@~> 2.11"
+    ],
+    "terraformModules": [],
+    "context": {
+        "excludeStackIdFromLogicalIds": "true",
+        "allowSepCharsInLogicalIds": "true"
+    }
+}

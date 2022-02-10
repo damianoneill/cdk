@@ -1,0 +1,39 @@
+env:
+  - CGO_ENABLED=0
+before:
+  hooks:
+    - make
+builds:
+  - id: "cdk"
+    main: ./main.go
+    binary: cdk
+    ldflags:
+     - -s -w -X github.com/damianoneill/cdk/cmd.version={{ .Version }} -X github.com/damianoneill/cdk/cmd.commit={{ .Commit }} -X github.com/damianoneill/cdk/cmd.date={{ .Date }}
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+dockers:
+ - image_templates:
+     - "github.com/damianoneill/cdk:latest"
+     - "github.com/damianoneill/cdk:{{ .Tag }}"
+   dockerfile: Dockerfile.golang
+archives:
+  - replacements:
+      amd64: x86_64
+release:
+  gitlab:
+    owner: damianoneill
+    name: cdk
+checksum:
+  name_template: "checksums.txt"
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"

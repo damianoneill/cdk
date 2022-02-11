@@ -32,4 +32,8 @@ destroy: ## Destroy the given stack
 	cdktf destroy $(STACK)
 
 get: ## Generates provider-specific bindings 
-	cdktf get 
+	TERRAFORM_BINARY_NAME=`asdf which terraform` cdktf get
+
+
+lint: 
+	@$(GOBIN)/golangci-lint run cmd

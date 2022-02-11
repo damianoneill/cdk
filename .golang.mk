@@ -29,7 +29,7 @@ LD_DATE := $(shell date -u +"%Y-%m-%dT%H:%M:%SZ")
 LD_FLAGS := -s -w -X $(GOMODULE)/cmd.version=$(LD_VERSION) -X $(GOMODULE)/cmd.commit=$(LD_COMMIT) -X $(GOMODULE)/cmd.date=$(LD_DATE)
 
 # third party versions
-GOLANGCI_LINT_VERSION := v1.32.2
+GOLANGCI_LINT_VERSION := v1.44.0
 
 .DEFAULT_GOAL := all
 

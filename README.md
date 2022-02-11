@@ -12,6 +12,14 @@ asdf install
 
 Alternatively ensure that the dependencies are installed on you host.
 
+## Modules and providers
+
+cdktf generates code for the providers that are used, therefore you need to run the following command every time the cdktf.json is updated. 
+
+```sh
+make get
+```
+
 ## Build
 
 Run make to the install the binary.

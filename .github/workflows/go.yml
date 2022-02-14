@@ -19,4 +19,4 @@ jobs:
         run: npm install -g cdktf-cli
 
       - name: Build
-        run: make get tools all
+        run: make get tools test

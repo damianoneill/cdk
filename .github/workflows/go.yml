@@ -16,7 +16,7 @@ jobs:
         uses: asdf-vm/actions/install@v1
 
       - name: install cdktf
-        uses: npm install -g cdktf-cli
+        run: npm install -g cdktf-cli
 
       - name: Build
         run: make get tools all

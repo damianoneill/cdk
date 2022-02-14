@@ -16,4 +16,4 @@ jobs:
         uses: asdf-vm/actions/install@v1
 
       - name: Build
-        run: make tools get all
+        run: make get tools all

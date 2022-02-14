@@ -2,6 +2,8 @@
 
 Cloud Development Kit for Terraform ([CDKTF](https://github.com/hashicorp/terraform-cdk)) allows you to use familiar programming languages to define cloud infrastructure and provision it through HashiCorp Terraform. This gives you access to the entire Terraform ecosystem without learning HashiCorp Configuration Language (HCL) and lets you leverage the power of your existing toolchain for testing, dependency management, etc.
 
+This project provides a demo of the example discussed at https://github.com/hashicorp/terraform-cdk/blob/main/docs/getting-started/go.md as of 2022-02-14.
+
 ## Setup
 
 This project uses [asdf](http://asdf-vm.com/) to install the dependencies, see [.tool-versions](.tools-versions) for the list.
